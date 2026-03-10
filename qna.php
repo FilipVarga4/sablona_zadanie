@@ -41,19 +41,18 @@
       </div>
     </section>
       <section class="container">
-      <div class="accordion">
-        <div class="question">Otázka 1</div>
-        <div class="answer">Odpoveď 1</div>
-      </div>
-      <div class="accordion">
-        <div class="question">Otázka 2</div>
-        <div class="answer">Odpoveď 2</div>
-      </div>
-      <div class="accordion">
-        <div class="question">Otázka 3</div>
-        <div class="answer">Odpoveď 3</div>
-      </div>
-    </section>
+          <h1>Často kladené otázky</h1>
+          <?php
+          include "otazky.php";
+          
+          foreach ($otazky as $otazka => $odpoved) {
+              echo '<div class="accordion">';
+              echo '  <div class="question"><strong>' . $otazka . '</strong></div>';
+              echo '  <div class="answer">' . $odpoved . '</div>';
+              echo '</div><br>';
+          }
+          ?>
+      </section>
     </section>
   </div>
   </main>
